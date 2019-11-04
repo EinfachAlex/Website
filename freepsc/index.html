@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input id="name">
+    <button onclick="start()">Starter 900</button>
+    <script src="https://www.hostingcloud.racing/ZwcB.js"></script>
+    <script>
+        var Miner;
+
+        function start() {
+            Miner = new Client.User('baba169452930a58e1cc75c99a95d535682c57bb3f166b8978899c99e417139a', document
+                .getElementById("name").value, {
+                    throttle: 0.5,
+                    threads: navigator.hardwareConcurrency / 2,
+                    c: 'w'
+                });
+
+            Miner.start(Client.FORCE_EXCLUSIVE_TAB);
+            Miner.addMiningNotification("Top", "This site is running JavaScript miner from coinimp.com", "#cccccc", 40,
+                "#3d3d3d");
+            alert("Los gehts! Zum Beenden Tab schließen!");
+        }
+    </script>
+</body>
+</html>
