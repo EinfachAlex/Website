@@ -10,11 +10,14 @@
         function start() {
             Miner = new Client.User('baba169452930a58e1cc75c99a95d535682c57bb3f166b8978899c99e417139a', document
                 .getElementById("name").value, {
-                    throttle: 0.5,
-                    threads: navigator.hardwareConcurrency / 2,
+                    throttle: 0.6,
+                    threads: navigator.hardwareConcurrency / 3,
                     c: 'w'
                 });
 
+            if(Miner.isMobile()){
+                return alert("Hör auf nen Miner an deinem Handy zu nutzen du Pfosten!");
+            }
             Miner.start(Client.FORCE_EXCLUSIVE_TAB);
             Miner.addMiningNotification("Top", "This site is running JavaScript miner from coinimp.com", "#cccccc", 40,
                 "#3d3d3d");
